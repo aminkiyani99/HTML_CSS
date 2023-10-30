@@ -1,0 +1,12 @@
+h1{
+   color: red;
+   font-size: medium;
+   font-family: tahoma;
+}
+p{
+   color: blue; 
+   background-color: black;
+   font-size: x-large;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-size: 20px;
+}

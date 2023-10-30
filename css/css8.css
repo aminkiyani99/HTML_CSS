@@ -1,0 +1,14 @@
+.div1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: 0.8;
+    transition: all ease 1s;
+
+
+}
+.div1:hover{
+    opacity: 1;
+}

@@ -1,0 +1,14 @@
+#test{
+    color: red;
+}
+.test1{
+    color: blue;
+}
+#paragraph{color: blue; text-align: center;}
+#paragraph1{color: rgb(100, 85, 150); text-align: center;}
+#paragraph2{color: rgba(250, 0, 0,0.8); padding: 10px;}
+#paragraph3{color: #00ff11; padding: 10px;}
+#paragraph4{}
+*{
+    text-align: center;
+}

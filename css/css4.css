@@ -1,0 +1,22 @@
+div{
+width: 400px;
+height: 300px;
+display: inline-block;
+text-align:center;
+}
+.header{
+    width: 100%;
+    background-color: green;
+}
+
+.content{
+    width: 100%;
+    background-color: white;
+}
+
+.amin{
+    width: 100%;
+    background-color: red;
+    color: black;
+
+}

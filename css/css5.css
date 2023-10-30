@@ -1,0 +1,16 @@
+div{
+    width: 200px;
+    height: 500px;
+    background-color: red;
+    display: inline-block;
+    /* margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; */
+    
+    /* margin: 100px; */
+    /* margin: 100px 100px; */
+    /* margin: 100px 200px 300px; */
+    
+
+}

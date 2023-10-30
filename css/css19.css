@@ -1,0 +1,48 @@
+div{
+    border:1px blue solid ;
+    margin: 5px;
+}
+div p{
+    margin: 5px;
+    color: red;
+    border: 1px solid blue;
+    padding: 5px;
+}
+div>p{
+    color: black;
+}
+p::first-letter{
+    font-size: 2rem;
+    color: black;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: none;
+    transition: all ease 1s;
+    
+}  
+p{
+
+    padding: 5px;
+} 
+.box:hover p{
+    display: block;
+    
+}
+a:link{
+    color: blue;
+
+}
+a:visited{
+    color: red;
+}
+.box:hover{
+    height: 200px;
+    background-color: black;
+    opacity: 0.1;
+}
+a:active{
+    color: black;
+}

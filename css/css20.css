@@ -1,0 +1,31 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 10px;
+    transition: all ease 1s;
+}
+.box1:hover{
+    /* transform: translateX(20px);
+    transform: translateY(20px); */
+    transform: translate(50px,100px);
+}
+.box2:hover{
+    background-color: black;
+    margin: 100px;
+    /* transform: scaleX(1.5);
+    transform: scaleY(1.5); */
+    transform: scale(0.5,1.5);
+}
+.box3:hover{
+    /* transform: rotateX(20deg);
+    transform: rotateY(10deg); */
+    transform: rotateX(30deg) rotateY(20deg);
+}
+.box4:hover{
+    transform: skewX(-20deg);
+    /* transform: skew(10deg,20deg); */
+}
+.box5:hover{
+    transform: matrix(1, 0.3, 1, 1, 4, 2);
+}

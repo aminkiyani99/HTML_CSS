@@ -1,0 +1,28 @@
+p{
+
+    /* font-size: 1.5rem;
+    text-shadow:10px 5px 10px red ;  */
+}
+p:hover{
+    font-size: 1.5rem;
+    text-shadow:10px 5px 10px red ;
+} 
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    margin: 0 auto;
+}
+    
+.box:hover{
+
+    animation: animation 2s ease infinite forwards;
+   
+}
+@keyframes animation{
+    50%{
+        box-shadow: 10px 10px 20px 10px black;
+    }
+
+
+}

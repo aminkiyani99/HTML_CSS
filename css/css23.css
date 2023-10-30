@@ -1,0 +1,31 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 10px;
+    /* animation: Move 3s ease ; */
+
+}
+div:hover{
+    animation: Move 6s ease ;
+    /* animation-fill-mode:forwards;
+    animation-iteration-count: 2;
+    animation-delay: 1s;
+    animation-direction: reverse; */
+}
+
+@keyframes Move{
+    from{background-color: red;}
+    to{
+        background-color: blue;
+    }
+    25%{
+        transform: translateX(250px)
+    }
+    50%{
+        transform: translateY(250px) translateX(250px);
+    }
+    100%{
+        transform: translateY(250px);
+    }
+}

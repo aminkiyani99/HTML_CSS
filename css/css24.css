@@ -1,0 +1,10 @@
+:root{
+    --danger:blue;
+}
+p{
+    color:var(--danger)
+}
+footer{
+    color:var(--danger);
+
+}

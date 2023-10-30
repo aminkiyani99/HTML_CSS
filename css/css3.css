@@ -1,0 +1,10 @@
+body{
+    /* background-color: gray;
+    background-image: url(/img/download\ \(2\).jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed ;
+    background-position: center 50%; */
+    background-repeat: ;
+/* @@@@ ba in mishe kholase nevesht @@@@ */
+    background: red url(/img/Mona-Lisa.jpg) no-repeat fixed center 50% ;
+}

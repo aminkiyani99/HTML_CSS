@@ -1,0 +1,41 @@
+.box{
+    width: 400px;
+    height: 350px;
+    background:url(/img/lich-king.jpg) center/cover no-repeat ;
+    position: relative;
+
+
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9)) ;
+    position: absolute;
+    opacity: 0;
+    transition: all ease 0.7s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.left-side{
+    width: 100px;
+    height: 200px;
+    border: 3px solid red;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    border-top: none;
+    border-right: none;
+
+}
+.right-side{
+    width: 100px;
+    height: 200px;
+    border: 3px solid red;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-bottom: none;
+    border-left: none;
+}
+
