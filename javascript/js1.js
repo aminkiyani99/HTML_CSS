@@ -114,3 +114,61 @@
 
 // }
 // document.write("today is: " + day)
+
+// ########jalase 6: funtion1 ##########
+
+// @@@@@@@@@@@@@ Named function @@@@@@@@@@@@@@@@@
+
+// function findbiggestfraction(a , b)
+// {
+
+//     a>b ? console.log("a:"+a) : console.log("b:"+b);
+
+// }
+
+// var firstfraction = 3/4;
+// var secondfraction = 5/8;
+
+
+// console.log("the function is running!!! ");
+
+// findbiggestfraction();
+
+// ########### jalase 7: function2 ###################
+
+// function findbiggestfraction(a,b)
+// {
+//     var result;
+//     a>b ? result = ["firstfraction",a] : result = ["secondfraction",b] ;
+//     return result;
+// }
+
+// // var newresult = findbiggestfraction(18/8, 20/5);
+// // console.log(findbiggestfraction(18/8,20/5));
+
+// var fractionresult= findbiggestfraction(12/3,12/6);
+
+// console.log("fraction "+ fractionresult[0]+ " with a value ", +fractionresult[1] + " is the biggest ");
+
+
+//  @@@@@@@@@@@ anonymous funtion @@@@@@@@@@@
+
+// var thebiggest = function (a,b) {
+//     var result;
+//     a>b ? result = ["a", a] : result= ["b",b];
+//     return result;
+// }
+
+// console.log(thebiggest(7/9,13/25));
+
+
+
+// @@@@@@@@@@@@@@ immediatly invoked function @@@@@@@@@@@
+
+// var thebiggest =( function (a,b) {
+//     var result;
+//     a>b ? result = ["a", a] : result= ["b",b];
+//     return result;
+// })(7/9,13/25);
+
+// console.log(thebiggest);
