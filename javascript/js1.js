@@ -172,3 +172,105 @@
 // })(7/9,13/25);
 
 // console.log(thebiggest);
+
+    // ######################### jalase 9 ############
+    // @@@@@@@@ object 1 @@@@@@@@
+
+    // var person={
+    //     firstname:"amin",
+    //     lastname:"kiyani",
+    // }
+    // var person2=new Object();
+
+    // person2.age= 24;
+    // person2.phoneNumber= 90255;
+// var course={
+//     title:"javascript",
+//     teacher:"mohamad hashemi",
+//     level:1,
+//     isactive:true,
+//     views:0,
+
+//     updateviews:function(){
+//         return ++course.views;
+//     }
+// }
+
+//     console.log(course.views);
+//     course.updateviews();
+//     console.log(course.views);
+
+   // ######################### jalase 10 ############
+    // @@@@@@@@ object 2 @@@@@@@@
+
+//     function Course(title,teacher,level,isactive,views,updateviews) {
+//         this.title=title,
+//         this.teacher=teacher,
+//         this.level=level,
+//         this.isactive=isactive,
+//         this.views=views,
+//         this.updateviews=function () {
+//             return ++this.views;
+            
+//         }
+//     }
+
+// var course1= new Course("javascript","amin kiyani",1,true,0);
+// console.log(course1);
+
+// ########### jalase 11: for Loops ##########
+
+// const cars=["bmw","benz","audi","ferarri","ford","lamborghini","cheverlet"]
+
+// // console.log("the car brand is: "+ cars[0]);
+// // console.log("the car brand is: "+ cars[1]);
+// // console.log("the car brand is: "+ cars[2]);
+// // console.log("the car brand is: "+ cars[3]);
+// // console.log("the car brand is: "+ cars[4]);
+// // console.log("the car brand is: "+ cars[5]);
+// // console.log("the car brand is: "+ cars[6]);
+
+// for ( let i=0; i<7; i++)
+// {
+//     console.log("the car brand is: "+ cars[i])
+// }
+
+
+// const cars=["bmw","benz","audi","ferarri","ford","lamborghini","cheverlet"]
+
+// const car={name:"bmw x4", year:2018, color:"black", isABS:true}
+
+// for (key in car) 
+// {
+
+//     console.log("for in: "+car[key]);
+// }
+
+// for (value of cars)
+// {
+//         console.log("for of: "+ value);
+// }
+
+// ### jalase 12 : while ######
+
+// var i=0;
+// while(i<=10){
+//     console.log(i);
+//     i++;
+
+// }
+// var i = 0;
+
+// for(let i=0 ; i<10; i++)
+// {
+//     if(i==5)
+//     {
+//     continue;
+//     }
+
+//     if(i==8)
+//     {
+//         break;
+//     }
+//     console.log(i);
+// }
