@@ -47,3 +47,71 @@
 // ######## jalase 20 - دسترسی و تغییر inline CSS در DOM ###############
 
 
+
+// const DIV = document.getElementById("demo");
+// DIV.onmouseover= function(){
+//     document.getElementById("demo")
+//     DIV.style.backgroundColor="blue"
+// }
+// DIV.onmouseout= function(){
+//     document.getElementById("demo")
+//     DIV.style.backgroundColor="black"
+// }
+
+// ################ jalase 23 v 24: event listeners ##############
+
+// const ELEMENT= document.getElementById("mybtn");
+// ELEMENT.addEventListener('click', displayDate);
+
+// function displayDate()
+// {
+//     document.getElementById("test").innerHTML=Date();
+
+// }
+
+// let p1=12;
+// let p2 = 8;
+// const ELEMENT= document.getElementById("mybtn");
+
+// ELEMENT.addEventListener('click',function() {
+//     myfunction(p1,p2);
+// });
+// // ELEMENT.addEventListener('click',otherfunction);
+
+// function myfunction(a,b){
+//     document.getElementById("test").innerHTML=a*b;
+// }
+// // function otherfunction(){
+// //     alert("other function happened");
+// // }
+
+// 
+// 
+// 
+ 
+const DIV1= document.getElementById("myDiv");
+const p1= document.getElementById("myP1");
+const ButtonElement = document.getElementById("myBtn");
+// DIV1.addEventListener('click', function(){
+//     alert("you clicked on DIV");
+// },true);
+
+// p1.addEventListener('click', function(){
+//     alert("you clicked on p");
+// },true);
+// buttonElement.addEventListener("click",RemoveEventFromDiv);
+
+ButtonElement.addEventListener("click",RemoveEventFromDiv);
+
+
+DIV1.addEventListener('mousemove', randomNumber);
+
+function RemoveEventFromDiv(){
+    DIV1.removeEventListener('mousemove',randomNumber);
+
+}
+
+
+function randomNumber(){
+    document.getElementById("test").innerHTML=Math.random();
+}
