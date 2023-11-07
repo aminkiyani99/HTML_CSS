@@ -1,0 +1,1 @@
+// document.querySelector(".cta a").setAttribute("style","color:red;background-color:black")

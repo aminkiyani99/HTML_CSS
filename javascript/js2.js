@@ -22,24 +22,28 @@
 
 // ###########3 jalase 19: add element to DOM ########
 
-const names=["mohamad", "ali", "amin", "reza", "nazanin"];
+// const names=["mohamad", "ali", "amin", "reza", "nazanin"];
 
 
-function CreateLiElement()
-{
-    for (const items of names) 
-    {
-        document.getElementsByClassName
+// function CreateLiElement()
+// {
+//     for (const items of names) 
+//     {
+//         document.getElementsByClassName
 
-    var node = document.createElement("li");
-    var textnode = document.createTextNode(items);
-    node.appendChild(textnode);
-    document.getElementById("myList").appendChild(node);
+//     var node = document.createElement("li");
+//     var textnode = document.createTextNode(items);
+//     node.appendChild(textnode);
+//     document.getElementById("myList").appendChild(node);
 
-    }
-}
+//     }
+// }
 
-CreateLiElement();
-document.getElementById("myList")
-.style.color
- = "red";
+// CreateLiElement();
+// document.getElementById("myList")
+// .style.color
+//  = "red";
+
+// ######## jalase 20 - دسترسی و تغییر inline CSS در DOM ###############
+
+
