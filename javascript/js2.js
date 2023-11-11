@@ -101,17 +101,17 @@ const ButtonElement = document.getElementById("myBtn");
 // },true);
 // buttonElement.addEventListener("click",RemoveEventFromDiv);
 
-ButtonElement.addEventListener("click",RemoveEventFromDiv);
+// ButtonElement.addEventListener("click",RemoveEventFromDiv);
 
 
-DIV1.addEventListener('mousemove', randomNumber);
+// DIV1.addEventListener('mousemove', randomNumber);
 
-function RemoveEventFromDiv(){
-    DIV1.removeEventListener('mousemove',randomNumber);
+// function RemoveEventFromDiv(){
+//     DIV1.removeEventListener('mousemove',randomNumber);
 
-}
+// }
 
 
-function randomNumber(){
-    document.getElementById("test").innerHTML=Math.random();
-}
+// function randomNumber(){
+//     document.getElementById("test").innerHTML=Math.random();
+// }
