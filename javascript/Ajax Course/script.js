@@ -1,32 +1,29 @@
-function loadUsers() {
+const btnLoad = document.getElementById("btnLoad");
+
+function LoadDoc() {
   var xhr = new XMLHttpRequest();
-  xhr.open("get", "https://api.github.com/users", true);
+
+  xhr.open("GET", "cd-collection.xml", true);
 
   xhr.onload = function () {
-    if (this.status == 200) {
-
-      var users = JSON.parse(this.responseText);
-      for (var i in users) {
-        var li = document.createElement("li");
-        li.className = "list-group-item user-item text-left";
-        var img = document.createElement("img");
-        img.className = "img-circle img-user img-thumbnail ";
-        img.setAttribute("src", users[i].avatar_url);
-        li.append(img);
-
-        var h3 = document.createElement("h3");
-        var a = document.createElement("a");
-        a.innerText = users[i].login;
-        h3.append(a);
-        img.after(h3);
-
-        document.querySelector(".list-group").append(li);
-      }
-    }
-  }
+    loadXML(this);
+  };
 
   xhr.send();
-
 }
 
-loadUsers();
+function loadXML(xml) {
+  const xmlDoc = xml.responseXML;
+  const cd = xmlDoc.getElementsByTagName("CD");
+  let table = "<tr><th>Artist</th><th>Title</th></tr>";
+  for (let i = 0; i < cd.length; i++) {
+    table += "<tr><td>" +
+      cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+      "</td><td>" +
+      cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+      "</td></tr>";
+  }
+  document.getElementById("tableXml").innerHTML = table;
+}
+
+btnLoad.addEventListener("click", LoadDoc);
