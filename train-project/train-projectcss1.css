@@ -1,6 +1,79 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("/train-project/materialize/font\ BYEKAN/BYekan-webfont.ttf") format("truetype"),
+        url("train-project\materialize\font BYEKAN\BYekan-webfont.eot") format("eot");
+
+        font-weight: normal;
+        font-style: normal;
+    
+}
+
+*{
+    direction: rtl;
+    font-family: "BYekan";
+}
 @media(min-width:600px){
 
-.topnavbar{
+.topnavbar{ 
     box-shadow: 0 0 50px gray !important;
 }
+#top-action-section{
+    display: flex !important;
+    align-items: center !important;
+}
+
+}
+.list-item.active .list-arrow-icon{ 
+    transform: rotate(280deg);
+
+
+
+}
+.list-item.active { 
+    background-color: rgba(194, 189, 189, 0.445);
+
+
+
+}
+
+.table.highlight > tbody > tr:hover {
+    background-color: rgba(16, 75, 202, 0.24)
+  }
+  
+.rounded_top30{
+    border-radius: 20px 20px 0 0;
+}
+.container{
+    width: 100% !important;
+}
+
+.add-user-modal-back{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.add-user-modal{
+    position: fixed;
+    height: 70vh;
+    background-color: white;
+    bottom: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: -70vh;
+
+
+}
+.add-user-modal.show{
+    bottom: 0;
+    box-shadow: 0 0 10px blue;
+
+
+}
+.sidenav_link_icon{
+    margin: 0 0 0 25px !important;
 }
