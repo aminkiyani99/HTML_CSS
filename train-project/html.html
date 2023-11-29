@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="train-projectcss1.css">
     <link rel="stylesheet" href="/train-project/util.css">
     <link rel="stylesheet" href="/train-project/materialize/css/materialize-css-rtl.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>User Managment</title>
 </head>
 
-<body dir="rtl">
+<body x-data="usersData">
 
     <!-- navbar section Start -->
     <nav class="topnavbar cyan darken-2 z-depth-2">
@@ -88,7 +89,7 @@
     </section>
     <!-- Content section End -->
 
-    <section class="user-list-section">
+    <section class="user-list-section" x-init="getUsers()">
         <ul class="collapsible hide-on-med-and-up">
             <li class=" list-item">
                 <div class="collapsible-header">
@@ -259,63 +260,22 @@
 
                 </thead>
 
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Amin Kiyani</td>
-                        <td>Amin.Kiayni</td>
-                        <td>Amin.kiyani@gmail.com</td>
-                        <td>Ahwaz-amanie-kh5-p6</td>
-                        <td>
-                            <i class="material-icons orange-text darken-2 m-l-5 m-r-5 hov-pointer">edit</i>
-                            <i class="material-icons red-text darken-2 m-l-5 m-r-5 hov-pointer">delete_forever</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Amin Kiyani</td>
-                        <td>Amin.Kiayni</td>
-                        <td>Amin.kiyani@gmail.com</td>
-                        <td>Ahwaz-amanie-kh5-p6</td>
-                        <td>
-                            <i class="material-icons orange-text darken-2 m-l-5 m-r-5 hov-pointer">edit</i>
-                            <i class="material-icons red-text darken-2 m-l-5 m-r-5 hov-pointer">delete_forever</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Amin Kiyani</td>
-                        <td>Amin.Kiayni</td>
-                        <td>Amin.kiyani@gmail.com</td>
-                        <td>Ahwaz-amanie-kh5-p6</td>
-                        <td>
-                            <i class="material-icons orange-text darken-2 m-l-5 m-r-5 hov-pointer">edit</i>
-                            <i class="material-icons red-text darken-2 m-l-5 m-r-5 hov-pointer">delete_forever</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Amin Kiyani</td>
-                        <td>Amin.Kiayni</td>
-                        <td>Amin.kiyani@gmail.com</td>
-                        <td>Ahwaz-amanie-kh5-p6</td>
-                        <td>
-                            <i class="material-icons orange-text darken-2 m-l-5 m-r-5 hov-pointer">edit</i>
-                            <i class="material-icons red-text darken-2 m-l-5 m-r-5 hov-pointer">delete_forever</i>
-                        </td>
-                    </tr>
+                <tbody class="desktop_tableb_body">
+                    <template x-for="user in users">
+                        <tr>
+                            <td x-text="user.id"></td>
+                            <td x-text="user.name">Amin Kiyani</td>
+                            <td x-text="user.username">Amin.Kiayni</td>
+                            <td x-text="user.email">Amin.kiyani@gmail.com</td>
+                            <td x-text="user.address.city+''+user.address.street">Ahwaz-amanie-kh5-p6</td>
+                            <td>
+                                <i class="material-icons orange-text darken-2 m-l-5 m-r-5 hov-pointer">edit</i>
+                                <i class="material-icons red-text darken-2 m-l-5 m-r-5 hov-pointer">delete_forever</i>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>1</td>
-                        <td>Amin Kiyani</td>
-                        <td>Amin.Kiayni</td>
-                        <td>Amin.kiyani@gmail.com</td>
-                        <td>Ahwaz-amanie-kh5-p6</td>
-                        <td>
-                            <i class="material-icons orange-text darken-2 m-l-5 m-r-5 hov-pointer">edit</i>
-                            <i class="material-icons red-text darken-2 m-l-5 m-r-5 hov-pointer">delete_forever</i>
-                        </td>
-                    </tr>
+
+                    </template>
 
                 </tbody>
             </table>
@@ -380,11 +340,13 @@
 
 
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js.map"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/train-project/materialize/js/materialize.min.js"></script>
     <script src="/train-project/train-js1.js"></script>
     <script src="/train-project/train-js2.js"></script>
+    <script src="alpinejs.js"></script>
 
 </body>
 
