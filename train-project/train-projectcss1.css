@@ -77,3 +77,18 @@
 .sidenav_link_icon{
     margin: 0 0 0 25px !important;
 }
+
+.user-list-section{
+    height: calc(100vh - 258px);
+    overflow: auto;
+}
+.current-page-number{
+    border: 2px solid;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20px;
+    width: 20px;
+}
