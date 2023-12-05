@@ -14,7 +14,7 @@ document.addEventListener('alpine:init', () => {
             username: "",
             email: "",
         },
-
+        userIdToEdit: null,
 
 
         getUsers() {
@@ -81,7 +81,7 @@ document.addEventListener('alpine:init', () => {
                     // 'rounded' is the class I'm applying to the toast
                     M.toast({
                         html: '!کاربر با موفقیت ایجاد شد',
-                        classes: 'rounded green'
+                        classes: ' green'
                     });
 
                 }
@@ -98,6 +98,81 @@ document.addEventListener('alpine:init', () => {
                 email: "",
             }
         },
+        handleDeleteUser(userId) {
+            var toastHTML = '<span>are you sure?(' + userId + ')</span><button class="btn-flat toast-action" x-on:click="handleConfirmDelete(' + userId + ')">Delete</button>';
+            M.toast({
+                html: toastHTML
+            });
 
+
+        },
+        handleConfirmDelete(userId) {
+            this.isloading = true
+            axios.delete("https://jsonplaceholder.typicode.com/users/" + userId).then((res) => {
+
+                if (res.status == 200) {
+                    this.mainUsers = this.mainUsers.filter(user => user.id != userId)
+                    this.users = this.users.filter(user => user.id != userId)
+                    this.pagination()
+
+                    M.toast({
+                        html: 'عملیات با موفقیت انجام شد',
+                        classes: ' green'
+                    });
+
+
+
+
+                }
+            }).finally(() => {
+                this.isloading = false
+
+            })
+        },
+        handleUpdateUser(user) {
+            axios.get("https://jsonplaceholder.typicode.com/users/" + user.id).then(res => {
+                if (res.status == 200) {
+                    this.newUserInfo = {
+                        name: res.data.name,
+                        username: res.data.username,
+                        email: res.data.email,
+                    }
+                    this.userIdToEdit = res.data.id
+                }
+
+                this.showAddModal = true
+            })
+
+
+
+
+
+        },
+        handleConfirmEditUser() {
+            this.isloading = true
+            axios.put("https://jsonplaceholder.typicode.com/users/" + this.userIdToEdit, this.newUserInfo).then((res) => {
+
+                if (res.status == 200) {
+                    const userIndex = this.mainUsers.findIndex(user => user.id = this.userIdToEdit)
+                    this.mainUsers[userIndex] = res.data
+                    this.showAddModal = false
+                    this.handleResetForm()
+                    this.userIdToEdit = null
+                    this.pagination()
+
+                    // 'rounded' is the class I'm applying to the toast
+                    M.toast({
+                        html: '!کاربر با موفقیت اپدیت شد',
+                        classes: ' green'
+                    });
+
+                }
+            }).finally(() => {
+                this.isloading = false
+
+
+            })
+
+        }
     }))
 })
